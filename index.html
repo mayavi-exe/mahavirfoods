@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadata -->
+    <title>Mahavir Foods & Sweets — Authentic Flavors of Virar</title>
+    <meta name="description" content="Traditional Indian sweets, fast food snacks, and thalis served fresh in Virar since 2010. Order now via WhatsApp for quick pickup.">
+    <meta name="keywords" content="indian sweets virar, qsr virar, vada pav, samosa, thali, mahavir foods, virar fast food">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mahavirfoods.netlify.app/"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="Mahavir Foods & Sweets — Authentic Flavors of Virar">
+    <meta property="og:description" content="Traditional Indian sweets, snacks, and thalis served fresh. Order via WhatsApp for pickup.">
+    <meta property="og:image" content="https://placehold.co/1200x630/E9EEE0/333333?text=Mahavir+Foods+%26+Sweets">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mahavirfoods.netlify.app/"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="Mahavir Foods & Sweets — Authentic Flavors of Virar">
+    <meta property="twitter:description" content="Traditional Indian sweets, snacks, and thalis served fresh. Order via WhatsApp for pickup.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/E9EEE0/333333?text=Mahavir+Foods+%26+Sweets">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪔</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans', sans-serif;
+            background-color: #F8F5F1; /* A warmer, beige background */
+        }
+        /* Custom colors matching the theme */
+        .accent-orange { background-color: #E69030; }
+        .accent-orange-text { color: #E69030; }
+        .accent-red { background-color: #D23021; }
+        .accent-red-text { color: #D23021; }
+
+        .hero-bg {
+        background-image: linear-gradient(rgba(90, 90, 90, 0.5), rgba(37, 36, 26, 0.5)), url('images\\qsr.jpg');
+        background-size: cover;
+        background-position: center;
+          }
+
+        
+        /* Floating cart button on mobile */
+        .floating-cart-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 40;
+            transition: transform 0.3s ease-in-out;
+        }
+        .floating-cart-btn.hidden {
+            transform: scale(0);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#hero" class="text-xl md:text-2xl font-bold accent-orange-text">
+                    Mahavir Foods & Sweets
+                </a>
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="#menu" class="text-gray-600 hover:accent-orange-text font-medium">Menu</a>
+                    <a href="#about" class="text-gray-600 hover:accent-orange-text font-medium">About</a>
+                    <a href="#catering" class="text-gray-600 hover:accent-orange-text font-medium">Catering</a>
+                    <a href="#contact" class="text-gray-600 hover:accent-orange-text font-medium">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                    <!-- Mobile menu can be added here if needed -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-white text-center p-4">
+            <div class="bg-black/70 p-8 rounded-lg">
+                <h1 class="text-4xl md:text-6xl font-extrabold" style="font-family: 'Noto Sans', sans-serif;">
+                    स्वाद भी, मिठास भी – सब कुछ एक जगह!
+                </h1>
+                <p class="text-lg md:text-xl mt-2 font-semibold">Since 2010</p>
+                <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-200" style="font-family: 'Noto Sans', sans-serif;">
+                    ताजा वड़ा, समोसा, थाली और हस्तनिर्मित मिठाई — पिकअप के लिए ऑर्डर करें।
+                </p>
+                <a href="#menu" class="mt-8 inline-block accent-orange hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">
+                    अभी ऑर्डर करें
+                </a>
+            </div>
+        </section>
+
+        <!-- Menu & Cart Section -->
+        <section id="menu" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Menu</h2>
+                <div class="lg:grid lg:grid-cols-3 lg:gap-8 items-start">
+                    
+                    <!-- Menu Items Grid -->
+                    <div id="menu-items-container" class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Menu items will be dynamically inserted here by JavaScript -->
+                    </div>
+
+                    <!-- Cart Panel -->
+                    <div id="cart-panel" class="lg:col-span-1 lg:sticky lg:top-24 mt-12 lg:mt-0">
+                        <div class="bg-white rounded-lg shadow-xl p-6">
+                            <h3 class="text-2xl font-bold border-b pb-3 mb-4">Your Order</h3>
+                            <div id="cart-items" class="mb-4">
+                                <!-- Cart items will be dynamically inserted here -->
+                                <p id="cart-empty-msg" class="text-gray-500 text-center py-4">Your cart is empty.</p>
+                            </div>
+                            
+                            <!-- Cart Total -->
+                            <div id="cart-total-section" class="border-t pt-4 mb-6 hidden">
+                                <div class="flex justify-between items-center font-bold text-xl">
+                                    <span>Total</span>
+                                    <span id="cart-total">₹0</span>
+                                </div>
+                            </div>
+
+                            <!-- Customer Details Form -->
+                            <div id="customer-details-form" class="hidden">
+                                <h4 class="font-bold text-lg mb-3">Pickup Details</h4>
+                                <div class="space-y-4">
+                                    <input type="text" id="customer-name" placeholder="Your Name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400">
+                                    <input type="tel" id="customer-phone" placeholder="Phone Number" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400">
+                                    <input type="datetime-local" id="pickup-time" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400">
+                                    <p class="text-xs text-gray-500">Note: Order is for pickup. Payment at the counter.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div id="cart-actions" class="mt-6 space-y-3 hidden">
+                                <button id="order-whatsapp-btn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                                    WhatsApp से ऑर्डर करें
+                                </button>
+                                <button id="clear-cart-btn" class="w-full accent-red hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                                    Clear Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+                <p class="text-lg text-gray-600 leading-relaxed" style="font-family: 'Noto Sans', sans-serif;">
+                    Mahavir Foods & Sweets, Virar में 2010 से पारंपरिक स्वाद पेश कर रहा है। हमारा लक्ष्य हमेशा ताज़ी सामग्री का उपयोग करके घर जैसा, स्वच्छ और स्वादिष्ट भोजन परोसना रहा है। हर मिठाई और हर स्नैक को प्यार और परंपरा के साथ तैयार किया जाता है, यह सुनिश्चित करते हुए कि आपको हर बाइट में प्रामाणिकता का स्वाद मिले।
+                </p>
+            </div>
+        </section>
+        
+        <!-- Catering Section -->
+        <section id="catering" class="py-16 md:py-24">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Catering & Bulk Orders</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8" style="font-family: 'Noto Sans', sans-serif;">
+                    त्योहारों और समारोहों के लिए मिठाई बॉक्स और स्नैक प्लेटर उपलब्ध।
+                    अपने कार्यक्रम को स्वादिष्ट बनाने के लिए हमें WhatsApp पर संपर्क करें!
+                </p>
+                <a href="https://wa.me/919890738717?text=Hi!%20I'm%20interested%20in%20your%20catering%20services." target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Visit Us</h2>
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4">Contact Details</h3>
+                        <div class="space-y-4 text-lg">
+                           <p><strong>Address:</strong> Shop No. 03, Sai Daya Apt., Naleshwar Nagar Near Yash Vidya Niketan school and Jagganath Bus Stop, Virar (East), Maharashtra, 401303</p>
+                           <p><strong>Phone:</strong> <a href="tel:+919876543210" class="accent-orange-text hover:underline">+91 9890738717</a></p>
+                           <p><strong>Hours:</strong> Mon - Sun, 8:00 AM - 10:00 PM</p>
+                        </div>
+                         <a href="https://maps.app.goo.gl/ewzNkDjcC3ZFeJjP8" target="_blank" class="mt-6 inline-block accent-orange hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                            Get Directions
+                        </a>
+                    </div>
+                    <div class="md:w-1/2 h-80 md:h-auto rounded-lg overflow-hidden shadow-xl">
+                        <iframe 
+                            src="https://maps.app.goo.gl/ewzNkDjcC3ZFeJjP8" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 Mahavir Foods & Sweets — Since 2010. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Floating Cart Button for Mobile -->
+    <a href="#cart-panel" id="floating-cart-btn" class="floating-cart-btn accent-orange text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg lg:hidden hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+        <span id="cart-item-count-badge" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center">0</span>
+    </a>
+
+
+    <!-- JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // =======================================================
+        // MENU DATA (Normally in menu-data.js)
+        // =======================================================
+        const MENU = [
+          { id: 1, name: "वड़ा (Vada)", price: 10, desc: "ताज़ा, कुरकुरा वड़ा", image: "images\\Batata-vada.jpg"
+ },
+          { id: 2, name: "वड़ा पाव (Vada Pav)", price: 12, desc: "क्लासिक मुंबई स्ट्रीट फ़ूड", image: "https://placehold.co/400x300/FFF5E1/333?text=Vada+Pav" },
+          { id: 3, name: "समोसा (Samosa)", price: 10, desc: "गरम-गरम, मसालेदार समोसा", image: "https://placehold.co/400x300/FFF5E1/333?text=Samosa" },
+          { id: 4, name: "समोसा पाव (Samosa Pav)", price: 13, desc: "समोसा पाव — स्वादिष्ट स्नैक", image: "https://placehold.co/400x300/FFF5E1/333?text=Samosa+Pav" },
+          { id: 5, name: "कटलेट (Cutlet)", price: 14, desc: "स्वादिष्ट वेज कटलेट", image: "https://placehold.co/400x300/FFF5E1/333?text=Cutlet" },
+          { id: 6, name: "बटाटाभज्जी पाव (Batata Bhajji Pav)", price: 13, desc: "मसालेदार और कुरकुरा", image: "https://placehold.co/400x300/FFF5E1/333?text=Batata+Bhajji" },
+          { id: 7, name: "कांदाभज्जी पाव (Kanda Bhajji Pav)", price: 15, desc: "प्याज़ के भज्जे के साथ", image: "https://placehold.co/400x300/FFF5E1/333?text=Kanda+Bhajji" },
+          { id: 8, name: "मोतीचूर लड्डू (250gm)", price: 50, desc: "शुद्ध घी के मोतीचूर लड्डू", image: "https://placehold.co/400x300/FFF5E1/333?text=Motichur+Laddu" },
+          { id: 9, name: "बेसन लड्डू (250gm)", price: 50, desc: "घर जैसे बेसन के लड्डू", image: "https://placehold.co/400x300/FFF5E1/333?text=Besan+Laddu" },
+          { id: 10, name: "पेड़ा (Peda) (250gm)", price: 100, desc: "मखमली, मुंह में घुलने वाला पेडा", image: "https://placehold.co/400x300/FFF5E1/333?text=Peda" },
+          { id: 11, name: "पूरी भाजी (Puri Bhaji)", price: 25, desc: "5 गरमा गरम पूरियां और मौसमी भाजी", image: "https://placehold.co/400x300/FFF5E1/333?text=Puri+Bhaji" },
+          { id: 12, name: "राईस प्लेट (Rice Plate)", price: 50, desc: "राइस, दाल, सब्ज़ी और सलाद", image: "https://placehold.co/400x300/FFF5E1/333?text=Rice+Plate" }
+        ];
+
+        // WhatsApp number for orders
+        const WHATSAPP_NUMBER = '919876543210'; // Use country code, no +, no spaces
+
+        // =======================================================
+        // CART LOGIC (Normally in cart.js)
+        // =======================================================
+        let cart = [];
+
+        function findMenuItem(itemId) {
+            return MENU.find(item => item.id === itemId);
+        }
+
+        function addToCart(itemId) {
+            const existingItem = cart.find(item => item.id === itemId);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                const menuItem = findMenuItem(itemId);
+                cart.push({ ...menuItem, quantity: 1 });
+            }
+            saveCartToLocalStorage();
+            updateCartUI();
+        }
+
+        function updateQuantity(itemId, change) {
+            const cartItem = cart.find(item => item.id === itemId);
+            if (cartItem) {
+                cartItem.quantity += change;
+                if (cartItem.quantity <= 0) {
+                    cart = cart.filter(item => item.id !== itemId);
+                }
+            }
+            saveCartToLocalStorage();
+            updateCartUI();
+        }
+
+        function clearCart() {
+            cart = [];
+            saveCartToLocalStorage();
+            updateCartUI();
+        }
+
+        function getCartTotal() {
+            return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+        }
+        
+        function getCartItemCount() {
+            return cart.reduce((total, item) => total + item.quantity, 0);
+        }
+
+        function saveCartToLocalStorage() {
+            try {
+                localStorage.setItem('mahavirCart', JSON.stringify(cart));
+            } catch (e) {
+                console.error("Could not save cart to localStorage:", e);
+            }
+        }
+
+        function loadCartFromLocalStorage() {
+            try {
+                const savedCart = localStorage.getItem('mahavirCart');
+                cart = savedCart ? JSON.parse(savedCart) : [];
+            } catch (e) {
+                console.error("Could not load cart from localStorage:", e);
+                cart = [];
+            }
+        }
+
+        // =======================================================
+        // MAIN UI LOGIC (Normally in main.js)
+        // =======================================================
+
+        const menuContainer = document.getElementById('menu-items-container');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartEmptyMsg = document.getElementById('cart-empty-msg');
+        const cartTotalSection = document.getElementById('cart-total-section');
+        const cartTotalEl = document.getElementById('cart-total');
+        const customerDetailsForm = document.getElementById('customer-details-form');
+        const cartActions = document.getElementById('cart-actions');
+        const clearCartBtn = document.getElementById('clear-cart-btn');
+        const orderWhatsappBtn = document.getElementById('order-whatsapp-btn');
+        const pickupTimeInput = document.getElementById('pickup-time');
+        const floatingCartBtn = document.getElementById('floating-cart-btn');
+        const cartItemCountBadge = document.getElementById('cart-item-count-badge');
+
+        // Render Menu Items
+        function renderMenu() {
+            menuContainer.innerHTML = '';
+            MENU.forEach(item => {
+                const menuItemHTML = `
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-48 object-cover">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h4 class="text-lg font-bold">${item.name}</h4>
+                            <p class="text-sm text-gray-500 mt-1 flex-grow" style="font-family: 'Noto Sans', sans-serif;">${item.desc}</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="font-bold text-lg">₹${item.price}</span>
+                                <button data-id="${item.id}" class="add-to-cart-btn accent-orange hover:bg-orange-500 text-white font-semibold py-2 px-4 rounded-md transition-colors">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                menuContainer.innerHTML += menuItemHTML;
+            });
+        }
+
+        // Update Cart UI
+        function updateCartUI() {
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '';
+                cartEmptyMsg.style.display = 'block';
+                cartTotalSection.style.display = 'none';
+                customerDetailsForm.style.display = 'none';
+                cartActions.style.display = 'none';
+                floatingCartBtn.classList.add('hidden');
+            } else {
+                cartEmptyMsg.style.display = 'none';
+                cartItemsContainer.innerHTML = cart.map(item => `
+                    <div class="flex justify-between items-center py-2 border-b">
+                        <div>
+                            <p class="font-semibold">${item.name}</p>
+                            <p class="text-sm text-gray-600">₹${item.price} x ${item.quantity} = ₹${item.price * item.quantity}</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button data-id="${item.id}" class="quantity-change-btn bg-gray-200 rounded-full w-6 h-6 font-bold" data-change="-1">-</button>
+                            <span>${item.quantity}</span>
+                            <button data-id="${item.id}" class="quantity-change-btn accent-orange text-white rounded-full w-6 h-6 font-bold" data-change="1">+</button>
+                        </div>
+                    </div>
+                `).join('');
+                
+                cartTotalEl.innerText = `₹${getCartTotal()}`;
+                cartTotalSection.style.display = 'block';
+                customerDetailsForm.style.display = 'block';
+                cartActions.style.display = 'block';
+                
+                // Update floating button
+                const itemCount = getCartItemCount();
+                cartItemCountBadge.textContent = itemCount;
+                floatingCartBtn.classList.remove('hidden');
+            }
+        }
+
+        // Generate and Send WhatsApp Order
+        function sendWhatsAppOrder() {
+            const customerName = document.getElementById('customer-name').value.trim() || 'Guest';
+            const customerPhone = document.getElementById('customer-phone').value.trim();
+            const pickupTime = document.getElementById('pickup-time').value;
+            
+            if (!pickupTime) {
+                alert('Please select a pickup time.');
+                return;
+            }
+
+            const formattedPickupTime = new Date(pickupTime).toLocaleString('en-IN', {
+                day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true
+            });
+
+            let message = `*Order for Mahavir Foods & Sweets*\n`;
+            message += `-------------------------\n`;
+            cart.forEach((item, index) => {
+                message += `${index + 1}. ${item.name} x${item.quantity} - ₹${item.price * item.quantity}\n`;
+            });
+            message += `-------------------------\n`;
+            message += `*Total: ₹${getCartTotal()}*\n\n`;
+            message += `*Name:* ${customerName}\n`;
+            if (customerPhone) message += `*Phone:* ${customerPhone}\n`;
+            message += `*Pickup Time:* ${formattedPickupTime}\n\n`;
+            message += `Please confirm pickup time. Thank you!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${+919890738717}?text=${encodedMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+        }
+        
+        // Set default pickup time (15 mins from now)
+        function setDefaultPickupTime() {
+            const now = new Date();
+            now.setMinutes(now.getMinutes() + 15);
+            // Adjust for timezone offset
+            now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+            pickupTimeInput.value = now.toISOString().slice(0, 16);
+        }
+
+        // Event Listeners
+        menuContainer.addEventListener('click', e => {
+            if (e.target.classList.contains('add-to-cart-btn')) {
+                const itemId = parseInt(e.target.dataset.id, 10);
+                addToCart(itemId);
+            }
+        });
+
+        cartItemsContainer.addEventListener('click', e => {
+            if (e.target.classList.contains('quantity-change-btn')) {
+                const itemId = parseInt(e.target.dataset.id, 10);
+                const change = parseInt(e.target.dataset.change, 10);
+                updateQuantity(itemId, change);
+            }
+        });
+
+        clearCartBtn.addEventListener('click', clearCart);
+        orderWhatsappBtn.addEventListener('click', sendWhatsAppOrder);
+        
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initialize App
+        loadCartFromLocalStorage();
+        renderMenu();
+        updateCartUI();
+        setDefaultPickupTime();
+    });
+    </script>
+</body>
+</html>
